@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Form</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(33, 33, 33, 0.1);
+        width: 400px;
+        margin: 20px auto; /* Added margin and auto to center forms horizontally */
+    }
+    h1, h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea,
+    input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+    <h1>Customer Information Form</h1>
+    <form action="/customer" method="POST">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName" required><br>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" required><br>
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="text" id="mobile" name="mobile" required><br>
+        <label for="address">Home Address:</label><br>
+        <textarea id="address" name="address" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Car Information</h2>
+    <form action="/car" method="POST">
+        <label for="firstName">Make</label><br>
+        <input type="text" id="make" name="make" required><br>
+        <label for="lastName">year:</label><br>
+        <input type="number" id="year" name="year" required><br>
+        <label for="mobile">color: </label>:</label><br>
+        <input type="text" id="color" name="color" required><br>
+        <label for="discount eligible">discount eligible:</label><br>
+        <input type="text" id="eligible" name="discounteligible" required><br>
+        <label for="mileage">mileage:</label><br>
+        <input type="number" id="mileage" name="mileage" required><br>
+        <label for="rate">rate per day:</label><br>
+        <input type="number" id="rate" name="rate_per_day" required><br>
+        <label for="model">model:</label><br>
+        <input type="text" id="model" name="model" required><br>
+        <label for="insurance code">insurance-code:</label><br>
+        <input type="text" id="insurance-code" name="insurance_code" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Insurance Information</h2>
+    <form action="/insurance" method="POST">
+        <!-- Insurance fields (id, provider, policy number) -->
+        <label for="insuranceid">ID</label><br>
+        <input type="number" id="insuranceid" name="insuranceid" required><br>
+        <label for="provider">provider:</label><br>
+        <input type="text" id="provider" name="provider" required><br>
+        <label for="policy number">policy number: </label>:</label><br>
+        <input type="text" id="policy" name="policy_num" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Payment Information</h2>
+    <form action="/payment" method="POST">
+        <!-- Payment fields (amount, method) -->
+        <label for="amount">Amount:</label><br>
+        <input type="number" id="payamount" name="amount" required><br>
+        <label for="method">payment method:</label><br>
+        <input type="text" id="paymethod" name="method" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Discount Information</h2>
+    <form action="/discount" method="POST">
+        <!-- Discount fields (percent, code, status) -->
+        <label for="percent">percent :</label><br>
+        <input type="number" id="discountpercent" name="percent" required><br>
+        <label for="discount-code">Discount code:</label><br>
+        <input type="number" id="discountcode" name="code" required><br>
+        <label for="discount-status">Discount status:</label><br>
+        <input type="text" id="discountstatus" name="status" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Rental Reservation</h2>
+    <form action="/rental" method="POST">
+        <!-- Rental fields (start date, end date) -->
+        <label for="start-date">start-date :</label><br>
+        <input type="date" id="startdate" name="start_date" required><br>
+        <label for="end-date">end-date :</label><br>
+        <input type="date" id="enddate" name="end_date" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>SUV Information</h2>
+    <form action="/suv" method="POST">
+        <!-- SUV fields (seat capacity) -->
+        <label for="seat-cap">seat capacity:</label><br>
+        <input type="number" id="seatcap" name="seat_cap" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Sport Car Information</h2>
+    <form action="/sportcar" method="POST">
+        <!-- Sport Car fields (horsepower, acceleration) -->
+        <label for="horse-power">horsepower:</label><br>
+        <input type="number" id="horsepower" name="horsepower" required><br>
+        <label for="acceleration">acceleration:</label><br>
+        <input type="number" id="accelerate" name="zeroToSixty" required><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
